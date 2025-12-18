@@ -8,7 +8,7 @@ if (-not $VersionNumber) {
 }
 
 $sourceFolderPath = "C:\Omnimed-delphi-Kiosk"
-$destinationFolderPath = "C:\Omnimed-delphi-Kiosk-release"
+$destinationFolderPath = "C:\Omnimed-delphi-Kiosk-releases"
 
 # Create the destination folder if it doesn't exist
 if (-not (Test-Path -Path "$destinationFolderPath\$VersionNumber" -PathType Container)) {
