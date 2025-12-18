@@ -31,4 +31,4 @@ The push to Github works with a token generated on Github (https://github.com/se
 Token name: `ProgDelphi01-<YYYYMMDD>`
 Scopes: repo (all)
 
-To update the git remotes, copy the generated access token from Github and call the Powershell script with the token as argument: `powershell ./update_github_token.ps1 'GITHUB_TOKEN'`.
+To update the git remotes, copy the generated access token from Github and call the Powershell script with the token as argument: `powershell ./update_github_token.ps1 'GITHUB_USER' 'GITHUB_TOKEN'`.

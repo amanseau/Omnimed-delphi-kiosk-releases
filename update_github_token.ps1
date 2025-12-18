@@ -1,5 +1,6 @@
 param(
-    [string]$GithubToken
+	[string]$GithubUser,
+	[string]$GithubToken
 )
 
 if (-not $GithubToken) {
@@ -8,11 +9,11 @@ if (-not $GithubToken) {
 }
 
 # Set the remote URL for fetch operations
-$fetchUrl = "https://subway122:$GithubToken@github.com/Omnimed/Omnimed-delphi-kiosk-releases.git"
+$fetchUrl = "https://${GithubUser}:${GithubToken}@github.com/Omnimed/Omnimed-delphi-kiosk-releases.git"
 git remote set-url origin $fetchUrl
 
 # Set the remote URL for push operations
-$pushUrl = "https://subway122:$GithubToken@github.com/subway122/Omnimed-delphi-kiosk-releases.git"
+$pushUrl = "https://${GithubUser}:${GithubToken}@github.com/${GithubUser}/Omnimed-delphi-kiosk-releases.git"
 git remote set-url --push origin $pushUrl
 
 Write-Host "Git remote URLs updated successfully."
