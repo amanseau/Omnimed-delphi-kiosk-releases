@@ -17,6 +17,7 @@ if (-not (Test-Path -Path "$destinationFolderPath\$VersionNumber" -PathType Cont
 
 # Copy the executable files
 Copy-Item -Path "$sourceFolderPath\GestBorne\GestBorne.exe" -Destination "$destinationFolderPath\$VersionNumber"
+Copy-Item -Path "$sourceFolderPath\Borne\Borne.exe" -Destination "$destinationFolderPath\$VersionNumber"
 
 # Generate last-modified.dat file
 $OutputPath = Join-Path -Path "$destinationFolderPath\$VersionNumber" -ChildPath 'last-modified.dat'
